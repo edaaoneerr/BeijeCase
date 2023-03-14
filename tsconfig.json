@@ -1,0 +1,35 @@
+{
+  "jsx": "react",
+  "extends": "@tsconfig/react-native/tsconfig.json", 
+  "compilerOptions": {
+    "skipLibCheck": true,   /* Skip type checking all .d.ts files. */ 
+    "declaration": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["es6", "dom"],
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+ },
+ "include": [
+  "**/*.ts",
+  "**/*.tsx",
+  "src"
+],
+"exclude": [
+  "node_modules",
+  "babel.config.cjs",
+  "jest.config.js",
+] 
+}
