@@ -66,35 +66,45 @@ const CartModal = ({ handleButtonPress }) => {
    
   function setToZeroSanitary(){
     
-    Store.getState().sanitaryPad.productCount = 0
-    dispatch(removeFromCart(ProductType.SanitaryPad))
+    for (let index = 0; index < Store.getState().sanitaryPad.productCount; index++) {
+      dispatch(removeFromCart(ProductType.SanitaryPad))  
+    }
 
-    Store.getState().superSanitaryPad.productCount = 0
-    dispatch(removeFromCart(ProductType.SuperSanitaryPad))
+    for (let index = 0; index < Store.getState().superSanitaryPad.productCount; index++) {
+      dispatch(removeFromCart(ProductType.SuperSanitaryPad))
+    }
 
-    Store.getState().superPlusSanitaryPad.productCount = 0
-    dispatch(removeFromCart(ProductType.SuperPlusSanitaryPad))
-
+    for (let index = 0; index < Store.getState().superPlusSanitaryPad.productCount; index++) {
+      dispatch(removeFromCart(ProductType.SuperPlusSanitaryPad))
+    }
     checkCount()
   }
 
   function setToZeroPanty(){
    
-    Store.getState().pantyliner.productCount = 0
-    dispatch(removeFromCart(ProductType.Pantyliner))
+    for (let index = 0; index < Store.getState().pantyliner.productCount; index++) {
+      dispatch(removeFromCart(ProductType.Pantyliner))  
+    }
 
-    dispatch(removeFromCart(ProductType.SuperPantyliner))
+
+    for (let index = 0; index < Store.getState().superPantyliner.productCount; index++) {
+      dispatch(removeFromCart(ProductType.SuperPantyliner))  
+    }
+
+  
     Store.getState().superPantyliner.productCount = 0
     
     checkCount()
   }
     
    function setToZeroTampon(){
-    Store.getState().tampon.productCount = 0
-    dispatch(removeFromCart(ProductType.Tampon))
+    for (let index = 0; index < Store.getState().tampon.productCount; index++) {
+      dispatch(removeFromCart(ProductType.Tampon))  
+    }
 
-    Store.getState().miniTampon.productCount = 0
-    dispatch(removeFromCart(ProductType.MiniTampon))
+    for (let index = 0; index < Store.getState().miniTampon.productCount; index++) {
+      dispatch(removeFromCart(ProductType.MiniTampon))  
+    }
   }
   
     
